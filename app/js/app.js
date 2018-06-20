@@ -53,6 +53,6 @@
       }
     }
   };
-  req.open('GET', 'https://[HOST].de/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=[ID]&sprintId=[ID]', false);
+  req.open('GET', 'https://[HOST].de/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=[BOARD_ID]&sprintId=[SPRINT_ID]', false);
   req.send();
 })()
