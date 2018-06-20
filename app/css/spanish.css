@@ -1,0 +1,9 @@
+body {
+  font-family: "Boogaloo"; 
+}
+.ticket {
+  background-color: #c70318;
+}
+.ticket-summary {
+  background-color: #ffc500;
+}
