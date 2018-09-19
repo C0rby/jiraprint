@@ -6,7 +6,7 @@ body {
 .ticket {
   display: -ms-grid;
   -ms-grid-columns: 50% 50%;
-  -ms-grid-rows: 25% 50% 25%;
+  -ms-grid-rows: 25% 75%;
   width: 60%;
   height: 250px;
   margin: auto;
@@ -18,10 +18,18 @@ body {
 .ticket-key {
   -ms-grid-column: 1;
 }
-.ticket-assignee {
+.ticket-annotations {
   -ms-grid-column: 2;
-  text-align: right;
+  text-align: center;
 }
+
+.ticket-annotations img {
+ margin-left: 16px;
+ width: 64px;
+ height: 64px;
+ float: right;
+}
+
 .ticket-summary {
   -ms-grid-column-span: 2;
   -ms-grid-row: 2;
