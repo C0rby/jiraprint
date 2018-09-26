@@ -146,7 +146,6 @@
       if(idsParam) {
         issueIds = issueIds.concat(idsParam.split(','));
       }
-<<<<<<< HEAD
 
       issues.filter(function(issue) {
         var issueId = issue.key.split('-')[1]; 
