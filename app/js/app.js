@@ -114,8 +114,9 @@
     return haystack.indexOf(needle) !== -1;
   }
 
+  var rapidViewId = null; // Set id here
   var sprintId = null;
-  GET('https://jira.sdvrz.de/rest/greenhopper/latest/sprintquery/276', function(response) {
+  GET('https://jira.sdvrz.de/rest/greenhopper/latest/sprintquery/' + rapidViewId, function(response) {
     var data = JSON.parse(response.responseText);
     var sprints = data.sprints;
     var filter = ActiveStateFilter();
@@ -133,10 +134,9 @@
       }
     }
   });
- 
 
   if(sprintId) {
-    GET('https://jira.sdvrz.de/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=276&sprintId=' + sprintId, function(response) {
+    GET('https://jira.sdvrz.de/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=' + rapidViewId + '&includeFutureSprints=true&sprintId=' + sprintId, function(response) {
       var data = JSON.parse(response.responseText);
       var responseElement = document.getElementById('response');
       var issues = data.contents.issuesNotCompletedInCurrentSprint;
